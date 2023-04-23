@@ -116,7 +116,7 @@ func TestOtherMiddleware(t *testing.T) {
 				for i := 0; i < 9; i++ {
 					go rate_func(ts, exitChan)
 				}
-				time.Sleep(3 * time.Minute)
+				time.Sleep(4 * time.Minute)
 				go rate_func(ts, exitChan)
 				for i := 0; i < 10; i++ {
 					code = <-exitChan
